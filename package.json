@@ -1,0 +1,25 @@
+{
+  "name": "gatsby-plugin-react-svg-loader",
+  "version": "0.1.0",
+  "description": "Adds react-svg-loader to gatsby webpack config.",
+  "main": "gatsby-node.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobmischka/gatsby-plugin-react-svg.git"
+  },
+  "keywords": [
+    "gatsby",
+    "svg",
+    "react",
+    "gatsby-plugin"
+  ],
+  "author": "Matheus S. Martins <matheusdsmartins@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheusdsmartins/gatsby-plugin-react-svg-loader/issues"
+  },
+  "homepage": "https://github.com/matheusdsmartins/gatsby-plugin-react-svg-loader#readme",
+  "dependencies": {
+    "react-svg-loader": "^3.0.3"
+  }
+}

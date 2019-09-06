@@ -1,4 +1,4 @@
-# gatsby-plugin-react-svg-loader [![npm version](https://badge.fury.io/js/gatsby-plugin-react-svg-loader.svg)]
+# gatsby-plugin-svgr-loader [![npm version](https://badge.fury.io/js/gatsby-plugin-svgr-loader.svg)]
 
 [gatsby-plugin-react-svg](https://github.com/jacobmischka/gatsby-plugin-react-svg) equivalent but using `@svgr/webpack` instead.
 
@@ -8,7 +8,7 @@ Adds [`@svgr/webpack`](https://github.com/smooth-code/svgr) to gatsby webpack co
 
 ## Install
 
-`npm install --save gatsby-plugin-react-svg-loader`
+`npm install --save gatsby-plugin-svgr-loader`
 
 ## How to use
 
@@ -17,7 +17,7 @@ Adds [`@svgr/webpack`](https://github.com/smooth-code/svgr) to gatsby webpack co
 
 plugins: [
   {
-    resolve: "gatsby-plugin-react-svg-loader",
+    resolve: "gatsby-plugin-svgr-loader",
     options: {
       rule: {
         include: /assets/ // See below to configure properly
@@ -35,7 +35,7 @@ The following configuration uses `@svgr/webpack` to process SVGs from a path mat
 
 ```js
 {
-    resolve: 'gatsby-plugin-react-svg-loader',
+    resolve: 'gatsby-plugin-svgr-loader',
     options: {
         rule: {
           include: /assets/
@@ -61,7 +61,7 @@ Another common configuration:
 
 ```js
 {
-    resolve: 'gatsby-plugin-react-svg-loader',
+    resolve: 'gatsby-plugin-svgr-loader',
     options: {
         rule: {
           include: /\.inline\.svg$/

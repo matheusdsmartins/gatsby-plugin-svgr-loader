@@ -5,7 +5,7 @@
   "main": "gatsby-node.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacobmischka/gatsby-plugin-react-svg.git"
+    "url": "git+https://github.com/matheusdsmartins/gatsby-plugin-react-svg-loader.git"
   },
   "keywords": [
     "gatsby",

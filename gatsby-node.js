@@ -1,7 +1,7 @@
 exports.onCreateWebpackConfig = ({
 	stage, actions, getConfig, rules
 }, { rule: ruleProps = {} }) => {
-	const { include, exclude, options = [], omitKeys, ...otherProps } = ruleProps
+	const { include, exclude, options, ...otherProps } = ruleProps
 
 	if ([
 		'develop',
@@ -9,18 +9,6 @@ exports.onCreateWebpackConfig = ({
 		'build-html',
 		'build-javascript'
 	].includes(stage)) {
-		if (omitKeys && Array.isArray(omitKeys) && omitKeys.length) {
-			const removals = new RegExp(omitKeys.join('|'), 'i')
-
-			options.push(function (value) {
-				Object.keys(value).forEach(function (key) {
-					if (removals.test(key)) {
-						delete value[key];
-					}
-				});
-			})
-		}
-
 		// Add the react-svg-loader rule
 		actions.setWebpackConfig({
 			module: {
@@ -32,14 +20,8 @@ exports.onCreateWebpackConfig = ({
 						...otherProps,
 						use: [
 							{
-								loader: 'babel-loader'
-							},
-							{
-								loader: 'react-svg-loader',
-								options: {
-									jsx: true,
-									...options
-								}
+								loader: '@svgr/webpack',
+								options
 							}
 						],
 					}

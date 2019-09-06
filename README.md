@@ -1,8 +1,8 @@
 # gatsby-plugin-react-svg-loader [![npm version](https://badge.fury.io/js/gatsby-plugin-react-svg-loader.svg)]
 
-[gatsby-plugin-react-svg](https://github.com/jacobmischka/gatsby-plugin-react-svg) equivalent but using react-svg-loader instead.
+[gatsby-plugin-react-svg](https://github.com/jacobmischka/gatsby-plugin-react-svg) equivalent but using `@svgr/webpack` instead.
 
-Adds [`react-svg-loader`](https://github.com/boopathi/react-svg-loader) to gatsby webpack config.
+Adds [`@svgr/webpack`](https://github.com/smooth-code/svgr) to gatsby webpack config.
 
 > **Note**: the plugin can **remove `SVG`s from the built-in `url-loader` config** in case invalid configuration.
 
@@ -29,9 +29,9 @@ plugins: [
 
 ## Configuration
 
-The `rule` plugin option can be used to pass [rule options](https://webpack.js.org/configuration/module/#rule). If either `include` or `exclude` options are present, `react-svg-loader` will use them and `url-loader` will be re-enabled with the inverse.
+The `rule` plugin option can be used to pass [rule options](https://webpack.js.org/configuration/module/#rule). If either `include` or `exclude` options are present, `@svgr/webpack` will use them and `url-loader` will be re-enabled with the inverse.
 
-The following configuration uses `react-svg-loader` to process SVGs from a path matching `/assets/`, and `url-loader` to process SVGs from everywhere else.
+The following configuration uses `@svgr/webpack` to process SVGs from a path matching `/assets/`, and `url-loader` to process SVGs from everywhere else.
 
 ```js
 {
@@ -56,7 +56,7 @@ import Icon from "./path/assets/icon.svg";
 
 Another common configuration:
 
-- name SVGs used in React components like `something.inline.svg` and process them with `react-svg-loader`
+- name SVGs used in React components like `something.inline.svg` and process them with `@svgr/webpack`
 - name other SVGs (e.g. used in css/scss) `something.svg` and process them with the default `url-loader`
 
 ```js

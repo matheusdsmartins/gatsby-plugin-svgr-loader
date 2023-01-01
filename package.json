@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/matheusdsmartins/gatsby-plugin-svgr-loader#readme",
   "dependencies": {
-    "@svgr/webpack": "^4.3.2"
+    "@svgr/webpack": "^6.5.1"
   }
 }
